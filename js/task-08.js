@@ -15,8 +15,7 @@ function onFormSubmit(event)
   {
    return alert(`All fields required`);
   }
-  else (email.length > 0 && password.length > 0)
-  {
+  else   {
     const formData = {
       email,
       password,

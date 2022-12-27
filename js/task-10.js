@@ -23,18 +23,22 @@ function createBoxes(amount) {
 
   let resizePx = 10;
   const defaultBoxSize = 30;
+
+  let childrenLength = boxes.children.length;
   for (let i = 0; i < amount; i += 1 ) {   
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
 
-    const boxSize = `${defaultBoxSize + i*resizePx}px`;
+    const boxSize = `${defaultBoxSize + (childrenLength + i)*resizePx}px`;
     div.style.width = boxSize;
     div.style.height = boxSize;
 
-    array.push(div);
+    array.push(div);   
     
   }
-  boxes.append(...array);
+   boxes.append(...array);
+   console.log(childrenLength);
+
 }
 
 
